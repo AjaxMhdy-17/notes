@@ -1,0 +1,66 @@
+
+<body>
+
+	<div class="box">
+		<main>
+			<section>
+				<h1> this is heading</h1>
+				<article id='first_art'>
+					<h3>article1</h3>
+					<p class="author">
+						author-1
+					</p>
+					<p class="description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente deserunt, exercitationem atque, repellat ullam, quae minima quas laudantium itaque, animi inventore tempore nihil neque ea magni. Culpa molestias hic odio.
+					</p>
+				</article>
+				<article>
+					<h3>article1</h3>
+					<p class="author">
+						author-1
+					</p>
+					<p class="description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente deserunt, exercitationem atque, repellat ullam, quae minima quas laudantium itaque, animi inventore tempore nihil neque ea magni. Culpa molestias hic odio.
+					</p>
+				</article>
+				<article>
+					<h3>article1</h3>
+					<p class="author">
+						author-1
+					</p>
+					<p class="description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente deserunt, exercitationem atque, repellat ullam, quae minima quas laudantium itaque, animi inventore tempore nihil neque ea magni. Culpa molestias hic odio.
+					</p>
+				</article>
+				<article>
+					<ul id="giftList">
+						<li>gift item-1</li>
+						<li>gift item-2</li>
+						<li>gift item-3</li>
+						<li>gift item-4</li>
+						<li>gift item-5</li>
+					</ul>
+				</article>
+			</section>
+		</main>
+	</div>
+	
+	<script>
+		
+		var first_art = document.getElementById('first_art') 
+		const new_paragraph = document.createElement('p')
+		new_paragraph.innerHTML = 'this is added by js'
+		first_art.appendChild(new_paragraph)
+
+
+		//add one more gift item 
+
+		var giftList = document.getElementById('giftList')
+
+		const li = document.createElement('li')
+		li.innerHTML = "Brand new Gift"
+		giftList.appendChild(li)
+
+
+	</script>
+</body>
