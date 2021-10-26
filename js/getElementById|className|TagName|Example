@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+
+	<div class="box">
+		<main>
+			<section>
+				<h1> this is heading</h1>
+				<article id='first_id'>
+					<h3>article1</h3>
+					<p class="author">
+						author-1
+					</p>
+					<p class="description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente deserunt, exercitationem atque, repellat ullam, quae minima quas laudantium itaque, animi inventore tempore nihil neque ea magni. Culpa molestias hic odio.
+					</p>
+				</article>
+				<article>
+					<h3>article1</h3>
+					<p class="author">
+						author-1
+					</p>
+					<p class="description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente deserunt, exercitationem atque, repellat ullam, quae minima quas laudantium itaque, animi inventore tempore nihil neque ea magni. Culpa molestias hic odio.
+					</p>
+				</article>
+				<article>
+					<h3>article1</h3>
+					<p class="author">
+						author-1
+					</p>
+					<p class="description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente deserunt, exercitationem atque, repellat ullam, quae minima quas laudantium itaque, animi inventore tempore nihil neque ea magni. Culpa molestias hic odio.
+					</p>
+				</article>
+			</section>
+		</main>
+	</div>
+	
+	<script>
+		
+	var targetArticles = document.getElementsByTagName('article')
+	// console.log(targetArticles.length)
+	// targetArticles.style.backgroundColor = 'red'
+	for(let i = 0 ; i < targetArticles.length ; i++){
+		targetArticles[i].style.backgroundColor = 'red'
+		targetArticles[i].style.padding = "10px"
+		targetArticles[i].style.marginBottom = "10px"
+
+	}
+
+	var targetAuthor = document.getElementsByClassName('author')
+
+	console.log(targetAuthor.length)
+
+	for(let i = 0 ; i < targetAuthor.length ; i++ ){
+		targetAuthor[i].style.backgroundColor = 'lightgreen'
+		targetAuthor[i].style.padding = '10px'
+		targetAuthor[i].style.textTransform = 'uppercase'
+	}
+
+
+	var targetDesc = document.getElementsByClassName('description')
+
+	for( let i = 0 ; i < targetDesc.length ; i++ ){
+		targetDesc[i].style.color = '#222'
+	}
+
+	var targetFirstId = document.getElementById('first_id')
+	targetFirstId.style.textAlign = 'center'
+
+	</script>
+	<script src='main.js'>
+		
+	</script>
+</body>
+</html>
