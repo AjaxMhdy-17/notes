@@ -1,0 +1,36 @@
+
+<body>
+
+	<div class="box">
+		<main>
+			<section id='container'>
+				<ul id="myList">
+					<li id='first' class="item">Lorem, ipsum dolor sit amet.</li>
+					<li class="item">Lorem, ipsum dolor sit amet.</li>
+					<li class="item">Lorem, ipsum dolor sit amet.</li>
+					<li class="item">Lorem, ipsum dolor sit amet.</li>
+				</ul>
+			</section>
+
+		</main>
+	</div>
+	
+	<script>
+		var myList = document.getElementById('myList')
+		myList.addEventListener('click',function(){
+			console.log('ul clicked')
+		})
+		var container = document.getElementById('container')
+		container.addEventListener('click',function(){
+			console.log('container clicked')
+		})
+		var first = document.getElementById('first')
+		first.addEventListener('click',function(){
+			console.log('first element clicked')
+			event.stopPropagation();
+		})
+	</script>
+	<script src='main.js'>
+		
+	</script>
+</body>
