@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+
+	<div class="box">
+		<h2>Take a Class</h2>
+		<h3>Learn from here</h3>
+		<p id="activity"></p>
+		<button id="change">change task</button>
+	</div>
+
+
+	<script>
+
+		document.getElementById('change').addEventListener('click',function(){
+			doSomenting()
+		})
+
+		function doSomenting(){
+			fetch('https://www.boredapi.com/api/activity')
+			.then(res => res.json())
+			.then(data => {
+				document.getElementById('activity').innerText=data.activity
+			})
+		}
+
+		
+
+	</script>
+	<script src='main.js'>
+		
+	</script>
+</body>
+</html>
