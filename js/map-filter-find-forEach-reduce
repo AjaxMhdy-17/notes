@@ -1,0 +1,48 @@
+
+const num = [1 , 2, 3 ,4 , 5 ,6, 7 ,8, 9 ,10, 11 ,12] 
+
+let result = [] ;
+for loop
+for(let i = 0 ; i < num.length ; i++ ){
+	const sqr = num[i] * num[i] ; 
+	result.push(sqr)
+}
+
+map
+num.map((item , index, arr ) => {
+	const sqr = item*item 
+	console.log('index item ' , index)
+	console.log('iterating item ' , item)
+	console.log('square items ' , sqr)
+	console.log('main num array ' ,arr)
+	result.push(item , sqr , index , arr)
+})
+
+filter
+result = num.filter((item) => {
+	return item % 2 === 1 
+})
+filter results array 
+
+
+find
+result = num.find(item => {
+	return item === 11
+})
+find returns single Element 
+
+
+forEach
+num.forEach((item , index , arr) => {
+	console.log(index , item , arr)
+})
+
+reduce
+const sum = num.reduce((previous , current , currentIndex , arr) => {
+	let r = previous + current
+	console.log(currentIndex , current , r , arr)
+	return previous + current
+})
+
+
+console.log(result)
