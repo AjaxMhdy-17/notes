@@ -1,0 +1,42 @@
+
+
+const person = {
+	firstName : 'mhdy' , 
+	lastName : 'hasan' , 
+	salary : 18000 , 
+	getFullName : function(){
+		console.log(this.firstName , this.lastName)
+	}, 
+	charge : function(amount){
+		this.salary = this.salary - amount 
+		return this.salary
+	}
+}
+
+const heroPerson = {
+	firstName : 'Hero' , 
+	lastName : 'next' , 
+	salary : 25000 , 
+
+}
+
+const frindlyPerson = {
+	firstName : 'Friend' , 
+	lastName : 'next' , 
+	salary : 25000 , 
+	
+}
+
+
+// bind returns a function 
+
+const heroCharge = person.charge.bind(heroPerson)
+
+const r1 = heroCharge(2000)
+console.log(r1)
+
+
+const friendlyCharge = person.charge.bind(frindlyPerson)
+
+const r2 = friendlyCharge(3000)
+console.log(r2)
