@@ -1,0 +1,24 @@
+
+
+const person = {
+	firstName : 'mhdy' , 
+	lastName : 'hasan' , 
+	salary : 18000 , 
+	getFullName : function(){
+		console.log(this.firstName , this.lastName)
+	}, 
+	charge : function(amount){
+		this.salary = this.salary - amount 
+		return this.salary
+	}
+}
+
+const ins = person
+const ins2 = person
+console.log(ins.charge(1200))
+console.log(ins)
+console.log(ins2)
+
+
+
+
