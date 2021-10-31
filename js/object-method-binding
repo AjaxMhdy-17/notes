@@ -1,42 +1,52 @@
 
-
 const person = {
 	firstName : 'mhdy' , 
 	lastName : 'hasan' , 
 	salary : 18000 , 
-	getFullName : function(){
-		console.log(this.firstName , this.lastName)
-	}, 
-	charge : function(amount){
-		this.salary = this.salary - amount 
-		return this.salary
+	getFullName : function(firstName , lastName){
+		console.log(firstName , lastName);
+	} , 
+	chargeAmountFromSalary : function(amount){
+		this.salary = this.salary - amount
+		return this.salary 
 	}
 }
 
 const heroPerson = {
-	firstName : 'Hero' , 
-	lastName : 'next' , 
+	firstName : 'hero' , 
+	lastName : 'lastName' , 
 	salary : 25000 , 
-
 }
 
-const frindlyPerson = {
-	firstName : 'Friend' , 
-	lastName : 'next' , 
+const friendlyPerson = {
+	firstName : 'frindly' , 
+	lastName : 'lastName' , 
 	salary : 25000 , 
-	
 }
 
+// person.getFullName(person.firstName , person.lastName)
+// person.getFullName.bind(heroPerson)(heroPerson.firstName,heroPerson.lastName)
+// const afterBindWithPersonGetFullNameMethod = person.getFullName.bind(friendlyPerson)
 
-// bind returns a function 
-
-const heroCharge = person.charge.bind(heroPerson)
-
-const r1 = heroCharge(2000)
-console.log(r1)
+// afterBindWithPersonGetFullNameMethod(friendlyPerson.firstName , friendlyPerson.lastName)
 
 
-const friendlyCharge = person.charge.bind(frindlyPerson)
+console.log(person , person.salary);
+person.chargeAmountFromSalary(2000) ;
+console.log(person, person.salary);
 
-const r2 = friendlyCharge(3000)
-console.log(r2)
+
+console.log(heroPerson);
+const afterBind = person.chargeAmountFromSalary.bind(heroPerson)
+afterBind(3000)
+console.log(heroPerson);
+
+
+console.log(friendlyPerson);
+const afterBindWithFriendlyPerson = person.chargeAmountFromSalary.bind(friendlyPerson)
+afterBindWithFriendlyPerson(1500)
+console.log(friendlyPerson);
+
+
+
+
