@@ -1,0 +1,50 @@
+
+const person = {
+	firstName : 'mhdy' , 
+	lastName : 'hasan' , 
+	salary : 18000 , 
+	getFullName : function(firstName , lastName){
+		console.log(firstName , lastName);
+	} , 
+	chargeAmountFromSalary : function(amount , tips , tax , others){
+		this.salary = this.salary - amount - tips - tax - others 
+		return this.salary 
+	}
+}
+
+const heroPerson = {
+	firstName : 'hero' , 
+	lastName : 'lastName' , 
+	salary : 25000 , 
+}
+
+const friendlyPerson = {
+	firstName : 'frindly' , 
+	lastName : 'lastName' , 
+	salary : 25000 , 
+}
+
+console.log(person);
+person.chargeAmountFromSalary(2000 , 100 , 50 , 25)
+console.log(person);
+
+console.log(heroPerson);
+person.chargeAmountFromSalary.call(heroPerson , 3000 , 150 , 75 , 33)
+console.log(heroPerson);
+
+console.log(friendlyPerson);
+person.chargeAmountFromSalary.call(friendlyPerson , 1500 , 750 , 33 , 17)
+console.log(friendlyPerson);
+
+
+console.log(person);
+person.chargeAmountFromSalary(2000 , 100 , 50 , 25)
+console.log(person);
+
+console.log(heroPerson);
+person.chargeAmountFromSalary.apply(heroPerson ,[3000 , 150 , 75 , 33])
+console.log(heroPerson);
+
+console.log(friendlyPerson);
+person.chargeAmountFromSalary.apply(friendlyPerson , [1500 , 750 , 33 , 17])
+console.log(friendlyPerson);
