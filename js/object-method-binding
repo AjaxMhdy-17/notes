@@ -30,6 +30,7 @@ const friendlyPerson = {
 
 // afterBindWithPersonGetFullNameMethod(friendlyPerson.firstName , friendlyPerson.lastName)
 
+//bind returns a function 
 
 console.log(person , person.salary);
 person.chargeAmountFromSalary(2000) ;
