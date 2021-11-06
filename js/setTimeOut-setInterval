@@ -1,0 +1,10 @@
+
+console.log(2222);
+setTimeout(() => {
+	console.log('lazy and waiting');
+}, 3000);
+console.log(4444);
+
+setInterval(() => {
+	console.log('running');
+},3000)
