@@ -1,29 +1,59 @@
+///****example closure***///
+// function stopWatch(){
+// 	let count = 0 ;
+// 	return function(){
+// 		count += 1 ;
+// 		return count ;
+// 	}
+// }
 
-function stopWatch(){
+// const clock1 = stopWatch() ;
+// clock1()
+// clock1()
+// clock1() 
+// console.log(clock1())
 
-	let count = 0 
+// const clock2 = stopWatch()
+// clock2()
+// console.log(clock2())
 
-	return function(){
-		return count++ 
+
+const firstFunction = () => {
+	var num17 = 71 ;
+}
+var num1 = 3 ;
+const  OuterFunc = () => {
+	var num3 = 7 ;
+	return function sum (){
+		var num2 = 5 ;
+		return function(changingValueOfnum1){
+			num1 = changingValueOfnum1
+			function multiple(){
+				return num3*5 ;
+			}
+			function addtion(){
+				return num1 + 9 ; 
+			}
+			function substruction(){
+				return num3 - num1 ;
+			}
+			///can't return multiple function just returning last one -> addition
+			return ( substruction && multiple && addtion ) 
+		}
 	}
 }
+// const ex = sum()
+// console.log(sum()()())
+/// we cann't change value of num17 from OuterFunc because inside firstFunction ->
+/// num17 is encapsulated. 
+/// here num1 is global scoped variable we can use and modify from any function in this file 
+/// inside OuterFunction all variables are encapsulated we can modify value  -> 
+///from anywhere obviously inside OuterFunc scope
+//default value of num1 = 3 
+///modifying value of num1 = 3 to num1 = 19 then calling addtion return 19 + 9 
+const pq = OuterFunc()()(19)()
+console.log(pq)
+/// modifying value of num1 = 3 to num1 = 91 then calling addtion return 91 + 9 
+const bd = OuterFunc()()(91)() 
+console.log(bd) 
 
-
-const clock1 = stopWatch() 
-const clock2 = stopWatch() 
-
-console.log('clock----1')
-console.log(clock1())
-console.log(clock1())
-console.log(clock1())
-console.log(clock1())
-
-console.log('clock----2')
-console.log(clock2())
-console.log(clock2())
-console.log(clock2())
-
-
-console.log('clock----1')
-console.log(clock1())
-console.log(clock1())
